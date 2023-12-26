@@ -1,8 +1,10 @@
 #!/usr/bin/env groovy
-import org.cli.*
+import org.cli.linuxcli
+
 
 def call() {
     echo "this is demo"
-    linuxcli sam = new linuxcli()
-    sam.name("work")
+    def devil = new linuxcli()
+    devil.name("work")
+
 }
