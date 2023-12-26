@@ -35,6 +35,9 @@ Linuxcli sample2
                         sample = new Man()
                         sample.echo_j("demo")
                         sample.sample()
+
+                        sample2 = new Linuxcli()
+                        sample2.sample("work")
                     }
                 }
             }
