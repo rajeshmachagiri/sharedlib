@@ -4,7 +4,7 @@ class linuxcli implements cli {
 
 
   def name(String arg) {
-     echo "$arg"
+      echo "$arg"
   }
 
   @Override
