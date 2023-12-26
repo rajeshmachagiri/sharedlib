@@ -33,7 +33,7 @@ def call() {
 
                         echo "this is demo"
                         def devil = new org.cli.linuxcli()
-                        devil.name()
+                        devil.name("demo")
                     }
                 }
             }
