@@ -1,3 +1,4 @@
+package org.cli
 
 class linuxcli implements cli {
   @Override

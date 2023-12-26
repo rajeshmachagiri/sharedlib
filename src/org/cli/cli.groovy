@@ -1,3 +1,5 @@
+package org.cli
+
 interface cli{
     echo(String args)
 
