@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-
+import org.cli.linuxcli
 
 
 def call() {
@@ -32,7 +32,7 @@ def call() {
                     script{
 
                         echo "this is demo"
-                        def devil = new org.cli.linuxcli()
+                        linuxcli devil = new linuxcli()
                         devil.name("demo")
                     }
                 }
