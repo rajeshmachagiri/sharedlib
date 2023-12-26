@@ -4,7 +4,8 @@ import org.cli.linuxcli
 
 def call() {
     echo "this is demo"
-    def devil = new linuxcli()
+    linuxcli devil = new linuxcli()
+    echo devil
     devil.name("work")
 
 }
