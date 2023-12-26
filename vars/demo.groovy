@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-import org.cli.linuxcli
+import org.cli.*
 
 
 def call() {
