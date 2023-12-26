@@ -1,5 +1,5 @@
 
-class linuxcli implements cli {
+Class linuxcli implements cli {
   @Override
   def echo(String arg) {
    echo "$arg"
