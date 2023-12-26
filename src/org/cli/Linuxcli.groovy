@@ -11,7 +11,7 @@ class Linuxcli implements cli {
   def sh(String arg) {
       sh "$arg"
   }
-  def error(String arg) {
+  def errorcall(String arg) {
       error "$arg"
   }
 

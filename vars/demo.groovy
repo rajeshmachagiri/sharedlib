@@ -37,7 +37,7 @@ Linuxcli sample2
                         sample.sample()
 
                         sample2 = new Linuxcli()
-                        sample2.error("work")
+                        sample2.errorcall("work")
                     }
                 }
             }

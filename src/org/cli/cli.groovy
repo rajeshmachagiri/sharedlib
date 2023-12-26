@@ -5,7 +5,7 @@ interface cli{
 
     def warn(String arg)
 
-    def error(String arg)
+    def errorcall(String arg)
 
     def sh(String arg)
 
