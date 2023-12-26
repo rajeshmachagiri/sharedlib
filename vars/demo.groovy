@@ -1,4 +1,4 @@
-import org.cli.linuxcli
+import org.cli.*
 
 
 def call() {
@@ -31,8 +31,8 @@ def call() {
                 steps{
                     script{
                         echo "this is demo"
-                         linuxcli devil = new linuxcli()
-                        devil.sample("demo")
+                        test ses = new test()
+                        ses.tell()
                     }
                 }
             }
