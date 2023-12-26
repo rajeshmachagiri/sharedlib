@@ -4,6 +4,6 @@ import org.cli.*
 def call() {
     echo "this is demo"
     linuxcli sam = new linuxcli()
-    sam.echo("work")
+    sam.name("work")
 
 }

@@ -1,7 +1,7 @@
 package org.cli
 
 interface cli{
-    echo(String args)
+    name(String args)
 
     warn(String arg)
 

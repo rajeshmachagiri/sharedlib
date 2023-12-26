@@ -2,7 +2,7 @@ package org.cli
 
 class linuxcli implements cli {
   @Override
-  def echo(String arg) {
+  def name(String arg) {
    echo "$arg"
   }
 
