@@ -1,8 +1,8 @@
-#!/usr/bin/env groovy
-import org.cli.*
+import org.cli.linuxcli
 
 
 def call() {
+
     pipeline {
         agent {
             kubernetes {
@@ -30,9 +30,8 @@ def call() {
             stage('init'){
                 steps{
                     script{
-
                         echo "this is demo"
-                        def devil = new linuxcli()
+                         linuxcli devil = new linuxcli()
                         devil.sample("demo")
                     }
                 }
