@@ -3,8 +3,8 @@ package org.cli
 class linuxcli implements cli {
 
   @Override
-  def echo(String arg) {
-       echo "$arg"
+  def sample(String arg) {
+      echo "sample"
   }
 
   @Override
