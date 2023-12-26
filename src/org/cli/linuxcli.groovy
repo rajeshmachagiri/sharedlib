@@ -4,7 +4,7 @@ class linuxcli implements cli {
 
 
   def name() {
-   println("demo")
+   echo "demo"
   }
 
   @Override
