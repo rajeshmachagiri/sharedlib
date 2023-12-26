@@ -1,7 +1,7 @@
 package org.cli
 
 interface cli{
-    name(String args)
+    def name(String args)
 
     warn(String arg)
 

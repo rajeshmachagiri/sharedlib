@@ -2,7 +2,7 @@ package org.cli
 
 class linuxcli implements cli {
 
-  name(String arg) {
+  def name(String arg) {
    echo "$arg"
   }
 
