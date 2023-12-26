@@ -32,8 +32,8 @@ Linuxcli sample2
                 steps{
                     script{
 
-                        sample2 = new Linuxcli()
-                        sample2.sample("demo")
+                        sample = new Man()
+                        sample.echo_j("demo")
                     }
                 }
             }
