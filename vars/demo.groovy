@@ -31,7 +31,7 @@ def call() {
                 steps{
                     script{
                         echo "this is demo"
-                        test ses = new test()
+                        def ses = new test()
                         ses.tell()
                     }
                 }
