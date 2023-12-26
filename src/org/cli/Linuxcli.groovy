@@ -1,10 +1,10 @@
 package org.cli
 
-class linuxcli implements cli {
+class Linuxcli implements cli {
 
   @Override
-  String sample(String arg) {
-      echo "sample"
+  def sample(String arg) {
+      echo "sample24"
   }
 
   @Override

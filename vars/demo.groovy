@@ -2,7 +2,8 @@ import org.cli.*
 
 
 def call() {
-
+Man sample
+Linuxcli sample2
     pipeline {
         agent {
             kubernetes {
@@ -30,9 +31,9 @@ def call() {
             stage('init'){
                 steps{
                     script{
-                        echo "this is demo"
-                        def ses = new test()
-                        ses.tell()
+
+                        sample2 = new Linuxcli()
+                        sample2.sample("demo")
                     }
                 }
             }
