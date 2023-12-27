@@ -14,9 +14,9 @@ def sh(String command){
     sh command
 }
 
-def withenv(List arg){
-    withEnv(arg[0] = arg[1]) {
-        echo ${arg[0]}
+def withenv(int arg){
+    withEnv(NumberSam = arg) {
+        echo ${NumberSam}
     }
 }
 

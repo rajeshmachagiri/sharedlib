@@ -16,7 +16,7 @@ class Linuxcli implements cli {
       link.error(arg)
   }
 
-  def withenv(List arg){
+  def withenv(int arg){
       link.withenv(arg)
   }
 
