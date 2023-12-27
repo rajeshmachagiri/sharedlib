@@ -4,6 +4,6 @@ import org.cli.*
 def call(String arg) {
     Linuxcli sample = new Linuxcli()
     sample.echo(arg)
-    sample.withenv(["sam",24])
+    sample.withenv(["sam","devil"])
 
 }
