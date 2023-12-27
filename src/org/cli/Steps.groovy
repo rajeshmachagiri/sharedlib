@@ -14,7 +14,7 @@ def sh(String command){
     sh command
 }
 
-def withenv(int arg){
+def withenv(Integer arg){
     withEnv(NumberSam = arg) {
         echo ${NumberSam}
     }
