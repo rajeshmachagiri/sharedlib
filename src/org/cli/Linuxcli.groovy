@@ -2,9 +2,10 @@ package org.cli
 
 class Linuxcli implements cli {
 
+  Man link = new Man()
   @Override
   def sample (String arg) {
-      echo arg
+      link.echo_j(arg)
   }
 
   @Override
