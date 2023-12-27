@@ -3,5 +3,7 @@ import org.cli.*
 
 def call(String arg) {
     Linuxcli sample = new Linuxcli()
-    sample.sample(arg)
+    sample.echo(arg)
+    sample.withenv(["sam",24])
+
 }

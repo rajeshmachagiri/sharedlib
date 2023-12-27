@@ -2,24 +2,22 @@ package org.cli
 
 class Linuxcli implements cli {
 
-  Man link = new Man()
+  Steps link = new Steps()
   @Override
-  def sample (String arg) {
+  def echo (String arg) {
       link.echo_j(arg)
   }
 
   @Override
   def sh(String arg) {
-      sh "$arg"
+      link.sh(arg)
   }
-  def errorcall(String arg) {
-      error "$arg"
+  def error(String arg) {
+      link.error(arg)
   }
 
-  def warn(String arg){
-      warnError("$arg") {
-          // some block
-      }
+  def withenv(List arg){
+      link.withenv(arg)
   }
 
 }
