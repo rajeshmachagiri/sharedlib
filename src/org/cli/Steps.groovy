@@ -15,7 +15,7 @@ def sh(String command){
 }
 
 def withenv(List<String> arg){
-    withEnv(arg[0]) {
+    withEnv(arg) {
         echo $SAM
     }
 }
