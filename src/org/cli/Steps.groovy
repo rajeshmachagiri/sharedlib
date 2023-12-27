@@ -2,7 +2,7 @@ package org.cli
 
 
 // echo the string on the screen/output
-def echo(String arg) {
+def echo_j(String arg) {
     echo arg
 }
 
