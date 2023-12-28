@@ -1,6 +1,6 @@
 package org.cli
 
-interface docinterface {
+interface Doc {
     def login()
 
     def auth()
