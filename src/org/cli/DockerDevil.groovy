@@ -2,7 +2,7 @@ package org.cli
 
 
 
-class Docker implements Doc {
+class DockerDevil implements Doc {
 Steps link = new Steps()
     @Override
     def login() {
