@@ -6,6 +6,5 @@ def call(String arg) {
     sample.echo(arg)
     sample.withenv(['SAM=245'],"evil",'''ls -la
 ls -la''')
-    DockerDevil doc = new DockerDevil()
-    doc.login()
+
 }
