@@ -20,7 +20,7 @@ def script(String label , String command ){
 
 def withenv(List<String> arg, String label, String command){
     withEnv(arg) {
-        echo "$SAM"
+
         script(label , command)
     }
 }
