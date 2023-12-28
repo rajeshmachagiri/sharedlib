@@ -1,5 +1,6 @@
-package org.cli
+package org.cli.docker
 
+import org.cli.Steps
 
 
 class DockerDevil implements Doc {
