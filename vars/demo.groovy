@@ -1,6 +1,4 @@
 import org.cli.*
-import org.cli.docker.*
-
 
 def call(String arg) {
     Linuxcli sample = new Linuxcli()

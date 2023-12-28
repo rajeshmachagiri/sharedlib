@@ -1,6 +1,4 @@
-package org.cli.docker
-
-import org.cli.Steps
+package org.cli
 
 class Docker implements docinterface{
 Steps link = new Steps()

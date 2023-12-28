@@ -1,4 +1,4 @@
-package org.cli.docker
+package org.cli
 
 interface docinterface {
     def login()
