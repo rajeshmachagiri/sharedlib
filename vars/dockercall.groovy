@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 import org.cli.docker.DockerDevil
 
-call() {
+def call() {
     pipeline {
         agent {
             kubernetes {
