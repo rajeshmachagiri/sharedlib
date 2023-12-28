@@ -2,7 +2,7 @@ package org.cli.docker
 
 import org.cli.Steps
 
-class Docker implements dockerinterface{
+class Docker implements Dockerinterface{
 Steps link = new Steps()
     @Override
     def login() {

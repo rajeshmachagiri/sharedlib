@@ -1,6 +1,6 @@
 package org.cli.docker
 
-interface dockerinterface {
+interface Dockerinterface {
     def login()
 
     def auth()
