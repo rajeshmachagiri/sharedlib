@@ -14,9 +14,16 @@ def sh(String command){
     sh command
 }
 
-def withenv(List<String> arg){
+def script(String label , String command ){
+    sh label: label, script: command
+}
+
+def withenv(List<String> arg, String label, String command){
     withEnv(arg) {
-        echo "$SAM"
+        echo $SAM
+        script(label , command)
     }
 }
+
+
 
