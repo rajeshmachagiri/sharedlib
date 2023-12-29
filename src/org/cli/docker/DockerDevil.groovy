@@ -14,7 +14,7 @@ class DockerDevil implements DockerInterface {
     @Override
     def build() {
         String command= "docker build -t ${reg.accountid}.dkr.ecr.${reg.region}.amazonaws.com/${tag}:devil ."
-        link.sh(command)
+        link.shell(command)
     }
 
     def login() {
@@ -26,7 +26,7 @@ echo ${reg.store} | docker login --username AWS --password-stdin ${reg.accountid
 
     def push() {
         String command = "docker push ${reg.accountid}.dkr.ecr.${reg.region}.amazonaws.com/${tag}:devil"
-        link.sh{command}
+        link.shell(command)
     }
 
 
