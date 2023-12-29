@@ -29,6 +29,13 @@ def call() {
                 env:
                   - name: DOCKER_TLS_CERTDIR
                     value: ""
+              - name: aws
+                image: dwolla/jenkins-agent-awscli:latest
+                securityContext:
+                  privileged: true
+                env:
+                  - name: DOCKER_TLS_CERTDIR
+                    value: ""
             '''
             }
         }
@@ -45,7 +52,7 @@ def call() {
                 parallel {
                     stage('docker build') {
                         steps {
-                            container('docker') {
+                            container('aws') {
 
                                 dir('users-api'){
 
