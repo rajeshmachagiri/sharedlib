@@ -18,9 +18,8 @@ class DockerDevil implements DockerInterface {
     }
 
     def login() {
-        println(reg.store)
+        link.echo_j(reg.store)
         String command = """\
-set +x
 echo ${reg.store} | docker login --username AWS --password-stdin ${reg.accountid}.dkr.ecr.${reg.region}.amazonaws.com""".stripIndent().toString()
         link.script("docker login",command)
     }
