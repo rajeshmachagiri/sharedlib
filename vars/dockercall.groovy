@@ -75,7 +75,9 @@ unzip awscliv2.zip
                             container('docker') {
                                 dir('todos-api'){
                                    sh "ls"
-                                   Docker.login()
+                                    script {
+                                        Docker.login()
+                                    }
                                 }
                             }
                         }
