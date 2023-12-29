@@ -71,6 +71,7 @@ unzip awscliv2.zip
 
                                     script {
                                         Docker.login()
+                                        Docker.build()
                                     }
                                 }
                             }
