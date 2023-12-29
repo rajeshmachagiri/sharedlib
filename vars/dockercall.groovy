@@ -50,6 +50,8 @@ def call() {
                                 dir('users-api'){
 
                                     script {
+                                        Docker = new DockerDevil()
+                                        Docker.login()
 
                                     }
                                 }
