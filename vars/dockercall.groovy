@@ -46,6 +46,9 @@ Registry registry
                     script {
                         demo("let it go")
 
+                        registry = new Registry()
+                        registry.store = "sam"
+
                     }
                 }
             }
@@ -64,9 +67,7 @@ apt install unzip -y
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 ./aws/install'''
-
-                                        registry = new Registry()
-                                        registry.store = "sam"
+                                        echo registry.store
 
                                     }
                                 }
