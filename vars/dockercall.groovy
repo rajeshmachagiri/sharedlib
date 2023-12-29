@@ -75,7 +75,7 @@ unzip awscliv2.zip
                     }
                     stage('docker-build2') {
                         steps {
-                            container('docker') {
+                            container('ubuntu') {
                                 dir('todos-api'){
                                    sh "ls"
                                     script {
