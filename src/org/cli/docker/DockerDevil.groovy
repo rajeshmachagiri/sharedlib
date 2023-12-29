@@ -6,7 +6,6 @@ import org.cli.registry.Registry
 
 class DockerDevil implements DockerInterface {
     Steps link = new Steps()
-    Tool tool = new Tool()
     String tag = "demo"
     Registry reg
     DockerDevil(Registry reg = new Registry()){
@@ -22,7 +21,7 @@ class DockerDevil implements DockerInterface {
         println(reg.store)
         String command = """
 set +x
-docker login --username AWS --password ${reg.store} ${reg.accountid}.dkr.ecr.region.amazonaws.com"""
+docker login --username AWS --password ${reg.store} ${reg.accountid}.dkr.ecr.${reg.region}.amazonaws.com"""
         link.script("docker login",command)
     }
 
