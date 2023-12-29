@@ -79,9 +79,9 @@ unzip awscliv2.zip
                                 dir('todos-api'){
                                    sh "ls"
                                     script {
-                                        Docker = new DockerDevil(registry)
-                                        Docker.login()
 
+                                        new Steps().echo_j(registry.store)
+                                        Docker = new DockerDevil(registry)
                                     }
                                 }
                             }
