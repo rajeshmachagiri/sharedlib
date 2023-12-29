@@ -6,9 +6,10 @@ import org.cli.registry.Registry
 import javax.swing.event.DocumentEvent
 
 def call() {
+DockerDevil Docker
+Registry registry
 
-    DockerDevil Docker
-    Registry registry
+
     pipeline {
         agent {
             kubernetes {
@@ -77,7 +78,7 @@ unzip awscliv2.zip
                         steps {
                             container('ubuntu') {
                                 dir('todos-api'){
-                                   sh "ls"
+                                    sh "ls"
                                     script {
 
                                         echo registry.store
