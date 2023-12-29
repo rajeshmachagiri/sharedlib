@@ -7,7 +7,7 @@ import org.cli.registry.Registry
 class DockerDevil implements DockerInterface {
     Steps link = new Steps()
     Tool tool = new Tool()
-    String tag = tool.determineRepoName()
+    String tag = "demo"
     Registry reg
     DockerDevil(Registry reg = new Registry()){
         this.reg = reg
