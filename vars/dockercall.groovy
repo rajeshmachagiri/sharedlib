@@ -50,8 +50,7 @@ def call() {
 
                                     script {
 
-                                        Docker = new DockerDevil()
-                                        Docker.login()
+                                        String store1 = link.withenvstd(["AWS_ACCESS_KEY_ID=xyz","AWS_SECRET_ACCESS_KEY=xyz","AWS_DEFAULT_REGION=xyz"],"demo","ls")
 
                                     }
                                 }
