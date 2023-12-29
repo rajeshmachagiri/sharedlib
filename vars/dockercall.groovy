@@ -65,7 +65,7 @@ unzip awscliv2.zip
 ./aws/install'''
 
                                         registry = new Registry()
-                                        registry.token()
+                                        registry.store = "sam"
 
                                     }
                                 }
