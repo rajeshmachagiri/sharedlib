@@ -29,8 +29,8 @@ def call() {
                 env:
                   - name: DOCKER_TLS_CERTDIR
                     value: ""
-              - name: aws
-                image: dwolla/jenkins-agent-awscli:latest
+              - name: ubuntu
+                image: ubuntu
                 securityContext:
                   privileged: true
                 env:
@@ -52,12 +52,13 @@ def call() {
                 parallel {
                     stage('docker build') {
                         steps {
-                            container('docker') {
+                            container('ubuntu') {
 
                                 dir('users-api'){
 
                                     script {
-                                        sh '''curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+                                        sh '''sudo apt update -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 sudo ./aws/install'''
                                         Docker = new DockerDevil()
