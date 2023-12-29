@@ -19,7 +19,6 @@ class DockerDevil implements DockerInterface {
     }
 
     def login() {
-        reg.token()
         println(reg.store)
         String command = """#!/usr/bin/env bash
 set +x

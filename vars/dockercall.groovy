@@ -8,7 +8,6 @@ import javax.swing.event.DocumentEvent
 def call() {
 
     DockerDevil Docker
-    Registry reg
     pipeline {
         agent {
             kubernetes {
@@ -64,8 +63,7 @@ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip
 unzip awscliv2.zip
 ./aws/install'''
                                         Docker = new DockerDevil()
-                                        Docker.login()
-
+                                        Docker.reg.token()
                                     }
                                 }
                             }
@@ -77,6 +75,7 @@ unzip awscliv2.zip
                             container('docker') {
                                 dir('todos-api'){
                                    sh "ls"
+                                   Docker.login()
                                 }
                             }
                         }
