@@ -1,7 +1,13 @@
 #!/usr/bin/env groovy
 import org.cli.docker.DockerDevil
+import org.cli.registry.Registry
+
+import javax.swing.event.DocumentEvent
 
 def call() {
+
+    DockerDevil Docker
+    Registry reg
     pipeline {
         agent {
             kubernetes {
@@ -40,19 +46,14 @@ def call() {
                         steps {
                             container('docker') {
 
-                                script {
-
-                                    DockerDevil dante = new DockerDevil()
-                                    dante.login()
-
-
-                                }
                                 dir('users-api'){
 
-                                    sh 'docker ps'
-                                    sh 'docker build -t users-api .'
-                                    sh 'docker tag users-api rajeshmachagiri/users-api:latest'
-                                    sh 'docker push rajeshmachagiri/users-api:latest'
+                                    script {
+
+                                        Docker = new DockerDevil()
+                                        Docker.login()
+
+                                    }
                                 }
                             }
 
@@ -62,11 +63,7 @@ def call() {
                         steps {
                             container('docker') {
                                 dir('todos-api'){
-                                    sh 'docker ps'
-                                    sh 'docker login -u=rajeshmachagiri -p=8686548640rrR!'
-                                    sh 'docker build -t auth-api .'
-                                    sh 'docker tag auth-api rajeshmachagiri/auth-api:latest'
-                                    sh 'docker push rajeshmachagiri/auth-api:latest'
+                                   sh "ls"
                                 }
                             }
                         }
