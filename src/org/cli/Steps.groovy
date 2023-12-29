@@ -18,8 +18,8 @@ def script(String label , String command ){
     sh label: label, script: command
 }
 
-def scriptstd(String labelstd , String commandstd ){
-    sh label: labelstd, script: commandstd , returnStdout:true
+def scriptstd(String label , String command ){
+    sh label: label, script: command , returnStdout:true
 }
 
 def withenv(List<String> arg, String label, String command){

@@ -50,9 +50,7 @@ def call() {
                                 dir('users-api'){
 
                                     script {
-                                        Steps link = new Steps()
-                                        String store1 = link.withenvstd(["AWS_ACCESS_KEY_ID=xyz","AWS_SECRET_ACCESS_KEY=xyz","AWS_DEFAULT_REGION=xyz"],"demo","ls")
-                                        echo store1
+
                                     }
                                 }
                             }
