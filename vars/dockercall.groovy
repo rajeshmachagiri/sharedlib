@@ -80,8 +80,8 @@ unzip awscliv2.zip
                                    sh "ls"
                                     script {
 
-                                        new Steps().echo_j(registry.store)
-                                        Docker = new DockerDevil(registry)
+                                        echo registry.store
+
                                     }
                                 }
                             }
