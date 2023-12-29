@@ -54,6 +54,7 @@ unzip awscliv2.zip
 ./aws/install'''
                             registry = new Registry()
                             registry.token()
+                            Docker = new DockerDevil(registry)
 
                         }
                     }
@@ -69,7 +70,7 @@ unzip awscliv2.zip
                                 dir('users-api'){
 
                                     script {
-                                        echo registry.store
+                                        Docker.login()
                                     }
                                 }
                             }
