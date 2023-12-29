@@ -21,6 +21,7 @@ class Registry implements RegistryInterface{
         String label = "getting token for ECR repo"
         String command = "aws ecr get-login-password --region $region"
         store = link.withenvstd(["AWS_ACCESS_KEY_ID=$access_key","AWS_SECRET_ACCESS_KEY=$secret_key","AWS_DEFAULT_REGION=${region}"],label,command)
+        store = store.trim()
         link.echo_j(store)
     }
 }
