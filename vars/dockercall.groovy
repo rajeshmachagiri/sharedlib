@@ -43,32 +43,33 @@ Registry registry
         stages {
             stage('init') {
                 steps {
-                    script {
-                        demo("let it go")
+                    container('ubuntu') {
+                        script {
+                            demo("let it go")
+                            sh '''apt update -y
+apt install curl -y
+apt install unzip -y
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+./aws/install'''
+                            registry = new Registry()
+                            registry.token()
 
-                        registry = new Registry()
-                        registry.store = "sam"
-
+                        }
                     }
+
                 }
             }
             stage('Build-Jar-file') {
                 parallel {
                     stage('docker build') {
                         steps {
-                            container('ubuntu') {
+                            container('dind') {
 
                                 dir('users-api'){
 
                                     script {
-                                        sh '''apt update -y
-apt install curl -y
-apt install unzip -y
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-./aws/install'''
                                         echo registry.store
-
                                     }
                                 }
                             }
@@ -77,7 +78,7 @@ unzip awscliv2.zip
                     }
                     stage('docker-build2') {
                         steps {
-                            container('ubuntu') {
+                            container('dind') {
                                 dir('todos-api'){
                                     sh "ls"
                                     script {
