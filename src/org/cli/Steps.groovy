@@ -10,8 +10,8 @@ def error(String arg){
     error arg
 }
 
-def sh(String command){
-    sh command
+def shell(String commandshell){
+    sh commandshell
 }
 
 def script(String label , String command ){
