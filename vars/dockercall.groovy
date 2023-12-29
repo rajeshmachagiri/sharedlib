@@ -33,9 +33,9 @@ def call() {
                 image: ubuntu
                 securityContext:
                   privileged: true
-                env:
-                  - name: DOCKER_TLS_CERTDIR
-                    value: ""
+                command:
+                - cat
+                tty: true
             '''
             }
         }
