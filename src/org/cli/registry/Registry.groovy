@@ -10,7 +10,7 @@ class Registry implements RegistryInterface{
     Steps link = new Steps()
     String store
 
-    Registry(String accountid = "133320081649", String region="eu-west-1",String access_key="AKIAR6CT7ADYSIBLV3MI",String secret_key="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"){
+    Registry(String accountid = "133320081649", String region="us-east-1",String access_key="AKIAR6CT7ADYSIBLV3MI",String secret_key="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"){
         this.region = region
         this.accountid = accountid
         this.access_key = access_key
