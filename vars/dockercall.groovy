@@ -64,7 +64,7 @@ unzip awscliv2.zip
                 parallel {
                     stage('docker build') {
                         steps {
-                            container('dind') {
+                            container('docker') {
 
                                 dir('users-api'){
 
@@ -78,7 +78,7 @@ unzip awscliv2.zip
                     }
                     stage('docker-build2') {
                         steps {
-                            container('dind') {
+                            container('docker') {
                                 dir('todos-api'){
                                     sh "ls"
                                     script {
