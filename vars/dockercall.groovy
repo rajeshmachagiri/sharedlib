@@ -52,7 +52,7 @@ def call() {
                 parallel {
                     stage('docker build') {
                         steps {
-                            container('aws') {
+                            container('docker') {
 
                                 dir('users-api'){
 
