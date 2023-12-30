@@ -86,7 +86,9 @@ unzip awscliv2.zip
                                     sh "ls"
                                     script {
 
-                                        echo registry.store
+
+                                        Docker.build()
+                                        Docker.push()
 
                                     }
                                 }
