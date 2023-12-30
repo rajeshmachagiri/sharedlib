@@ -86,7 +86,7 @@ unzip awscliv2.zip
                                     sh "ls"
                                     script {
 
-
+                                        Docker.login()
                                         Docker.build()
                                         Docker.push()
 
