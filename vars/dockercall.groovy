@@ -55,6 +55,7 @@ unzip awscliv2.zip
                             registry = new Registry()
                             registry.token()
                             Docker = new DockerDevil(registry)
+                            String demo = libraryResource(sample.yaml)
 
                         }
                     }
@@ -63,50 +64,50 @@ unzip awscliv2.zip
             }
             stage('Build-Jar-file') {
                 parallel {
-                    stage('docker build') {
-                        steps {
-                            container('docker') {
-
-                                dir('users-api'){
-
-                                    script {
-                                        Docker.login()
-                                        Docker.build()
-                                        Docker.push()
-                                    }
-                                }
-                            }
-
-                        }
-                    }
-                    stage('docker-build2') {
-                        steps {
-                            container('docker') {
-                                dir('todos-api'){
-                                    sh "ls"
-                                    script {
-
-                                        Docker.login()
-                                        Docker.build()
-                                        Docker.push()
-
-                                    }
-                                }
-                            }
-                        }
-                    }
+//                    stage('docker build') {
+//                        steps {
+//                            container('docker') {
+//
+//                                dir('users-api'){
+//
+//                                    script {
+//                                        Docker.login()
+//                                        Docker.build()
+//                                        Docker.push()
+//                                    }
+//                                }
+//                            }
+//
+//                        }
+//                    }
+//                    stage('docker-build2') {
+//                        steps {
+//                            container('docker') {
+//                                dir('todos-api'){
+//                                    sh "ls"
+//                                    script {
+//
+//                                        Docker.login()
+//                                        Docker.build()
+//                                        Docker.push()
+//
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
 
                 }
             }
-            stage('kubectl'){
-                steps {
-                    sh "curl -LO https://dl.k8s.io/release/v1.28.4/bin/linux/amd64/kubectl"
-                    sh "chmod +x kubectl"
-                    sh "./kubectl get pods"
-                    sh "./kubectl apply -f ./k8s/users-api"
-                    sh "./kubectl apply -f ./k8s/todos-api"
-                }
-            }
+//            stage('kubectl'){
+//                steps {
+//                    sh "curl -LO https://dl.k8s.io/release/v1.28.4/bin/linux/amd64/kubectl"
+//                    sh "chmod +x kubectl"
+//                    sh "./kubectl get pods"
+//                    sh "./kubectl apply -f ./k8s/users-api"
+//                    sh "./kubectl apply -f ./k8s/todos-api"
+//                }
+//            }
         }
 
     }
