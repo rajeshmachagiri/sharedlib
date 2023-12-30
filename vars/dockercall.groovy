@@ -46,16 +46,17 @@ Registry registry
                     container('ubuntu') {
                         script {
                             demo("let it go")
-                            sh '''apt update -y
-apt install curl -y
-apt install unzip -y
-curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-unzip awscliv2.zip
-./aws/install'''
-                            registry = new Registry()
-                            registry.token()
-                            Docker = new DockerDevil(registry)
+//                            sh '''apt update -y
+//apt install curl -y
+//apt install unzip -y
+//curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+//unzip awscliv2.zip
+//./aws/install'''
+//                            registry = new Registry()
+//                            registry.token()
+//                            Docker = new DockerDevil(registry)
                             String demo = libraryResource(sample.yaml)
+                            echo demo
 
                         }
                     }
