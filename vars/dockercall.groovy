@@ -62,8 +62,8 @@ unzip awscliv2.zip
 
                 }
             }
-            stage('Build-Jar-file') {
-                parallel {
+//            stage('Build-Jar-file') {
+//                parallel {
 //                    stage('docker build') {
 //                        steps {
 //                            container('docker') {
@@ -97,8 +97,8 @@ unzip awscliv2.zip
 //                        }
 //                    }
 
-                }
-            }
+//                }
+//            }
 //            stage('kubectl'){
 //                steps {
 //                    sh "curl -LO https://dl.k8s.io/release/v1.28.4/bin/linux/amd64/kubectl"
