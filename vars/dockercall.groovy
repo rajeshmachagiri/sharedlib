@@ -55,7 +55,7 @@ Registry registry
 //                            registry = new Registry()
 //                            registry.token()
 //                            Docker = new DockerDevil(registry)
-                            String demo = libraryResource(sample.yaml)
+                            String demo = libraryResource("sample.yaml")
                             echo demo
 
                         }
